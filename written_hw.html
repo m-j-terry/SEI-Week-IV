@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <p style="font-weight: bold; font-size: 1.75em;">Written Homework Submission for Sir Michael Terry on the twenty-second of April in the 2023rd year of the Common Era, according to the Gregorain calendar</p>
+  </head>
+  <body>
+    <ol>
+      <li>What is the Document Object Model (DOM)?</li>
+      <ol style="list-style-type: lower-alpha; list-style-type: none; text-indent: 1em; margin-left: -2em; padding-bottom: 0;">
+       <li class = answer>The Document Object Model is an in-memory data structure that represents the browser's HTML web document. It is, in essence, a bridge that connects the HTML and JavaScript, allowing programmers to turn HTML elements into manipulatable elements in JS. This is done by linking the HTML element to a JS variable using document.querySelector(HTML tag, class/id name). By storing a reference to the HTML tags as JS variables, we enable the JS code to access and alter the HTML.</li> </ol>
+      
+      
+      <li>What is the difference between HTML and the DOM?</li>  
+      <ol style="list-style-type: lower-alpha; list-style-type: none; text-indent: 1em; margin-left: -2em; padding-bottom: 0;">
+       <li class = answer>The HTML is what the web-browser displays to the user, whereas the DOM is the bridge connecting the visible HTML with the invisible JavaScript functions. HTML is a marionette puppet and the DOM is the strings. When JS calls on a variable in the DOM, it effectively pulls on the string and the user sees the puppet (or HTML) move. Just as the puppet is not the same as the strings but is manipulated by the use of strings, so the HTML is not the same as the DOM but is manipulated by the DOM linking it to the JS.</li> </ol>
+      
+      
+      <li>What are the main types of DOM nodes?</li> 
+       <ol style="list-style-type: lower-alpha; list-style-type: none; text-indent: 1em; margin-left: -2em; padding-bottom: 0;">
+       <li class = answer>The DOM can best be thought of as a tree, each part of which represents a separate node, which is accessible to JS through the DOM. The roots of the DOM are present in the name: Document. The document is written in HTML, so this is the trunk. Next, the tree splits into its two main branches: head and body. The headhas its own branches, which include the title and metadata. The body is split in various ways, first by header nodes (1-6). Headers can include lists (ordered and unordered) which represent a single node. Likewise, each of the list items represents another node.</li> </ol>
+      
+      
+      <li>How can you traverse the DOM tree and access specific elements or nodes?</li>  
+       <ol style="list-style-type: lower-alpha; list-style-type: none; text-indent: 1em; margin-left: -2em; padding-bottom: 0;">
+       <li class = answer>You can traverse the tree and grab specific elements using the document.querySelector() method. You must be specific in how you grab particular elements, as the DOM will access the first element it finds in the code according to the tags you've called. For instance, if both h1 and h2 have p tags, and you wanted to access the paragraph in the h2 specifically, you would need to list the arm of the tree that this tag belongs to: document.querySelector(h2 < p) </br>This would avoid the issue of the DOM grabbing the wrong p tag.</li> </ol>
+      
+      
+      <li>What are some common methods for adding, modifying, or deleting elements in the DOM?</li> 
+       <ol style="list-style-type: lower-alpha; list-style-type: none; text-indent: 1em; margin-left: -2em; padding-bottom: 0;">
+       <li class = answer>Working within a function, you can call for the creation of new elements using .createElement(tag-name); likewise, you may decide where on the page this element should fall by tacking on the .appendChild(parent-tag) or what attributes it ought to have by adding .setAttribute(name, value). Of course, .hasAttribute(name) and .getAttribute(name) are other function you can use for manipulating the HTML element in the DOM. For an existing element, you may change or set its attributes (such as class or id) by using ... .innertext allows you to change the text of an HTML element, while innerHTML allows you to alter the text as if it were an HTML element (meaning you can use strong tags and /br or linebreak tags.)</li> </ol>
+      
+
+      <li>What are events and event listeners in the context of the DOM?</li>  
+       <ol style="list-style-type: lower-alpha; list-style-type: none; text-indent: 1em; margin-left: -2em; padding-bottom: 0;">
+       <li class = answer>Event listeners allow the JS to 'listen' and respond to particular user input or (clicking, hovering, typing, etc.) The formula for adding an event listerner is domElementName.addEventListener('event', functionToExecute). You could also use document.querySelector in place of a DOM element, and the JS would listen for the event just the same.</li> </ol>
+      
+      
+      <li>What is the difference between a "live" NodeList and a "static" NodeList? When would you use each?</li>  
+       <ol style="list-style-type: lower-alpha; list-style-type: none; text-indent: 1em; margin-left: -2em; padding-bottom: 0;">
+         <li class = answer>A live node list will recognize when a new element has been appended to the HTML from the DOM and will render the appended elements to the html, such that they can be returned to the console or returned by a function. A static NodeList will not do this, thus appended items will not be referenced when called upon. I suppose you would use a static nodelist when you want to retain the identity of the original listed elements, whereas a live nodelist would be best when you want the appended items to be included with the earlier ones when being called upon. </li> </ol>
+      
+
+      <li>What is event delegation, and why is it useful when working with the DOM?</li>  
+       <ol style="list-style-type: lower-alpha; list-style-type: none; text-indent: 1em; margin-left: -2em; padding-bottom: 0;">
+       <li class = answer>Event delegation allows you to write DRYer code by taking as the event handler some kind of parent element, which can pass the function onto each of the child elements, rather than writing the function over and over for each of the child elements.</li> </ol>
+      
+
+      <li>How can you use the DOM to apply CSS styles to elements dynamically?</li> 
+      <ol style="list-style-type: lower-alpha; list-style-type: none; text-indent: 1em; margin-left: -2em; padding-bottom: 0;">
+       <li class = answer>If you have pre-defined CSS code that you would like to be applied to elements dynamically as the user interacts with the DOM and the DOM interacts with the user, you could set this pre-defined CSS to a certain class, which can be added to the element in question either by using the element.setAttribute('attribute name--class, in this instance', 'attribute value') method or using the element.className='className'</li> </ol>
+      
+
+      <li>What are some performance considerations and best practices when working with the DOM?</li> 
+      <ol style="list-style-type: lower-alpha; list-style-type: none; text-indent: 1em; margin-left: -2em; padding-bottom: 0;">
+       <li class = answer>Begin your project by writing several lines of pseudocode, explaining 1) what the problem is and 2) what logical steps can be taken to fix the problem. Be sure to name variables and functions appropriately, such that they explain the data they are storing or describe the function they are performing. Seperate your code so that like elements can be found together. Group your global variables together, your state variables together, your event.listeners together, your functions together, etc.</li> </ol>
+      
+<!--        <li></li> 
+   <ol style="list-style-type: lower-alpha; padding-bottom: 0;">
+       <li class = answer></li> </ol>
+      
+      <li></li> 
+        <ol style="list-style-type: lower-alpha; padding-bottom: 0;">
+        <li class = answer></li> </ol>
+
+       <li></li> 
+         <ol style="list-style-type: lower-alpha; padding-bottom: 0;">
+         <li class = answer></li> </ol>  -->
+      
+    </ol>
+  </body>
+</html>
